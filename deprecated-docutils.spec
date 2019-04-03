@@ -4,7 +4,7 @@
 #
 Name     : deprecated-docutils
 Version  : 0.14
-Release  : 49
+Release  : 50
 URL      : http://pypi.debian.net/docutils/docutils-0.14.tar.gz
 Source0  : http://pypi.debian.net/docutils/docutils-0.14.tar.gz
 Summary  : Docutils -- Python Documentation Utilities
@@ -56,7 +56,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554314629
+export SOURCE_DATE_EPOCH=1554317322
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -78,19 +78,19 @@ cp %{buildroot}/usr/bin/rst2man.py %{buildroot}/usr/bin/rst2man
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/rst2html.py
-/usr/bin/rst2html4.py
-/usr/bin/rst2html5.py
-/usr/bin/rst2latex.py
-/usr/bin/rst2man
-/usr/bin/rst2man.py
-/usr/bin/rst2odt.py
-/usr/bin/rst2odt_prepstyles.py
-/usr/bin/rst2pseudoxml.py
-/usr/bin/rst2s5.py
-/usr/bin/rst2xetex.py
-/usr/bin/rst2xml.py
-/usr/bin/rstpep2html.py
+%exclude /usr/bin/rst2html.py
+%exclude /usr/bin/rst2html4.py
+%exclude /usr/bin/rst2html5.py
+%exclude /usr/bin/rst2latex.py
+%exclude /usr/bin/rst2man
+%exclude /usr/bin/rst2man.py
+%exclude /usr/bin/rst2odt.py
+%exclude /usr/bin/rst2odt_prepstyles.py
+%exclude /usr/bin/rst2pseudoxml.py
+%exclude /usr/bin/rst2s5.py
+%exclude /usr/bin/rst2xetex.py
+%exclude /usr/bin/rst2xml.py
+%exclude /usr/bin/rstpep2html.py
 
 %files legacypython
 %defattr(-,root,root,-)
